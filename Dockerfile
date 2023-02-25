@@ -1,5 +1,4 @@
 FROM openjdk:8-jdk-alpine
-WORKDIR /app/
-COPY target/ecommerce-docker.jar /app/
+COPY target/ecommerce-docker.jar  ecommerce-docker.jar
 EXPOSE 8084  
-ENTRYPOINT ["java" ,"-jar", "ecommerce-docker.jar"]
+ENTRYPOINT ["java" ,"-jar", "/ecommerce-docker.jar"]
